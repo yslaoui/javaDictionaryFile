@@ -1,3 +1,6 @@
-apina:monkey
-alla oleva:below
-olut:beer
+pain:  bread
+bread: pain
+task:  tâche
+alla oleva:    below
+olut:    beer
+tâche: task

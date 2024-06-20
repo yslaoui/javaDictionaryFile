@@ -7,8 +7,10 @@ public class Main {
         if (wasSuccessful) {
             System.out.println("Successfully loaded the dictionary from file");
         }
-        System.out.println(saveableDictionary.translate("apina"));
-        System.out.println(saveableDictionary.translate("ohjelmointi"));
-        System.out.println(saveableDictionary.translate("alla oleva"));
+        saveableDictionary.add("pain", "bread");
+        saveableDictionary.add("task", "tâche");
+        saveableDictionary.delete("apina");
+        saveableDictionary.save();
+
     }
 }

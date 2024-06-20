@@ -3,12 +3,11 @@ package dictionary;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class SaveableDictionary {
@@ -67,6 +66,25 @@ public class SaveableDictionary {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public boolean save() {
+        try {
+            List<String> values = new ArrayList<>();
+            PrintWriter writer = new PrintWriter(this.fileName);
+            for (String key: this.dictionary.keySet()) {
+                if (!(values.contains(key))) {
+                    writer.println(key + ": " + this.dictionary.get(key));
+                    values.add(this.dictionary.get(key));
+                }
+            }
+            writer.close();
+            return true;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
+
     }
 
 }
