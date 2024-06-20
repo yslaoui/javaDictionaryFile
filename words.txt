@@ -1,6 +1,4 @@
-pain:  bread
-bread: pain
-task:  tâche
-alla oleva:    below
-olut:    beer
-tâche: task
+pain: bread
+task: tâche
+alla oleva: below
+olut: beer
